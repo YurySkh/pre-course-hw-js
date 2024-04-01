@@ -17,7 +17,9 @@ let passportMarried = {
 // 2. Выводи в консоль первый и второй объект целиком
 // 3. Не нужно использовать функции и другие хитрые подходы, просто: 
 
-let passportMarried2 = {...passportMarried, married: true} 
+const passportMarried2 = JSON.parse(JSON.stringify(passportMarried));
+passportMarried2.married = true;
+
  
 console.log(passportMarried); 
 console.log(passportMarried2);
